@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B33610421FEC86C500A0E206 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33610411FEC86C500A0E206 /* Parser.swift */; };
 		B35E536C1C53E7470075D77E /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35E536B1C53E7470075D77E /* PlayerViewController.swift */; };
 		B3D411C41C484DE300A6F1C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D411C31C484DE300A6F1C6 /* AppDelegate.swift */; };
-		B3D411C61C484DE300A6F1C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D411C51C484DE300A6F1C6 /* ViewController.swift */; };
+		B3D411C61C484DE300A6F1C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D411C51C484DE300A6F1C6 /* HomeViewController.swift */; };
 		B3D411C91C484DE300A6F1C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D411C71C484DE300A6F1C6 /* Main.storyboard */; };
 		B3D411CB1C484DE300A6F1C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D411CA1C484DE300A6F1C6 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B316F8E61FEC6F7A003A4208 /* Pantomime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pantomime.framework; path = Carthage/Build/tvOS/Pantomime.framework; sourceTree = "<group>"; };
+		B33610411FEC86C500A0E206 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		B35E536B1C53E7470075D77E /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		B3D411C01C484DE300A6F1C6 /* TVPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D411C31C484DE300A6F1C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3D411C51C484DE300A6F1C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B3D411C51C484DE300A6F1C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B3D411C81C484DE300A6F1C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3D411CA1C484DE300A6F1C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3D411CC1C484DE300A6F1C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,11 +38,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B316F8E51FEC6F7A003A4208 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B316F8E61FEC6F7A003A4208 /* Pantomime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B3D411B71C484DE300A6F1C6 = {
 			isa = PBXGroup;
 			children = (
 				B3D411C21C484DE300A6F1C6 /* TVPT */,
 				B3D411C11C484DE300A6F1C6 /* Products */,
+				B316F8E51FEC6F7A003A4208 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,7 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				B3D411C31C484DE300A6F1C6 /* AppDelegate.swift */,
-				B3D411C51C484DE300A6F1C6 /* ViewController.swift */,
+				B33610411FEC86C500A0E206 /* Parser.swift */,
+				B3D411C51C484DE300A6F1C6 /* HomeViewController.swift */,
 				B35E536B1C53E7470075D77E /* PlayerViewController.swift */,
 				B3D411C71C484DE300A6F1C6 /* Main.storyboard */,
 				B3D411CA1C484DE300A6F1C6 /* Assets.xcassets */,
@@ -97,6 +110,7 @@
 					B3D411BF1C484DE300A6F1C6 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = D4K93GDN8V;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -135,7 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3D411C61C484DE300A6F1C6 /* ViewController.swift in Sources */,
+				B3D411C61C484DE300A6F1C6 /* HomeViewController.swift in Sources */,
+				B33610421FEC86C500A0E206 /* Parser.swift in Sources */,
 				B3D411C41C484DE300A6F1C6 /* AppDelegate.swift in Sources */,
 				B35E536C1C53E7470075D77E /* PlayerViewController.swift in Sources */,
 			);
@@ -243,11 +258,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = D4K93GDN8V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = TVPT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pt.ruicosta.TVPT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -258,11 +280,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = D4K93GDN8V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = TVPT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pt.ruicosta.TVPT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};

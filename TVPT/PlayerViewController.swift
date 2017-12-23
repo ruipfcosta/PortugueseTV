@@ -4,11 +4,11 @@ import AVKit
 
 class PlayerViewController: UIViewController {
     
-    let url: NSURL
+    let url: URL
     
-    init(url: NSURL) {
+    init(url: URL) {
         self.url = url
-        super.init(nibName: .None, bundle: .None)
+        super.init(nibName: .none, bundle: .none)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -18,14 +18,11 @@ class PlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let player = AVPlayer(URL: url)
         let playerController = AVPlayerViewController()
+        playerController.player = AVPlayer(url: url)
         
-        playerController.player = player
         self.addChildViewController(playerController)
         self.view.addSubview(playerController.view)
         playerController.view.frame = self.view.frame
-        
-        player.play()
     }
 }
